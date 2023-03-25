@@ -5,3 +5,5 @@ Acode Ayu Mirage is a plugin designed for the Acode text editor, based on the po
 > Bug Report - [Click here](https://github.com/bajrangCoder/acode-ayu-mirage-theme)
 
 > Any improvement - [Click here](https://github.com/bajrangCoder/acode-ayu-mirage-theme)
+
+**Hope you all love this theme. ❤️❤️🥺😢**
