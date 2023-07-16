@@ -5,7 +5,9 @@
   "version": "1.0.0",
   "readme": "readme.md",
   "icon": "icon.png",
-  "files": [],
+  "files": [
+        "icons/file_type_video@2x.png"
+    ],
   "price": 0,
   "author": {
     "name": "Raunak Raj",

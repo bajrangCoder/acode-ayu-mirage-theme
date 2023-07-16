@@ -15,6 +15,19 @@ module.exports = (env, options) => {
         },
       ],
     },
+    {
+
+      test: /\.css$/,
+
+      use: [
+        'raw-loader',
+        'postcss-loader',
+      ],
+    },
+    {
+      test: /\.(svg|png)$/,
+      loader: 'file-loader',
+    },
   ];
 
   const main = {
