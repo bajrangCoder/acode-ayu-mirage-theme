@@ -1,13 +1,11 @@
 {
   "id": "bajrangcoder.acode.ayumirage",
-  "name": "Acode Ayu Mirage",
+  "name": "Acode Ayu",
   "main": "dist/main.js",
   "version": "1.0.0",
   "readme": "readme.md",
   "icon": "icon.png",
-  "files": [
-        "icons/file_type_video@2x.png"
-    ],
+  "files": [],
   "price": 0,
   "author": {
     "name": "Raunak Raj",

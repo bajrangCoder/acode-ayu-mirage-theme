@@ -13,6 +13,7 @@ class AyuTheme {
             ></style>
             document.head.append(this.#style)
             const WHITE = "#FFFFFF";
+            // 1st Ayu Mirage theme
             const ayuMirage = new ThemeBuilder('Ayu Mirage', 'dark', 'free');
             ayuMirage.primaryColor = '#1C212B';
             ayuMirage.darkenedPrimaryColor = '#1C212B';
@@ -38,6 +39,7 @@ class AyuTheme {
             ayuMirage.buttonTextColor = WHITE;
             ayuMirage.preferredFont = "Victor Mono Medium";
             
+            // 2nd Ayu Mirage Dark version
             const ayuDark = new ThemeBuilder('Ayu Dark', 'dark', 'free');
             ayuDark.primaryColor = '#0F131A';
             ayuDark.darkenedPrimaryColor = '#0F131A';
