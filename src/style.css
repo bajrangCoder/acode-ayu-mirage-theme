@@ -7,7 +7,17 @@
     height: 1em;
     width: 1em;
 }
-.icon.folder-outline:before {
+.list.collapsible.hidden .tile .icon.folder:before {
+    display: inline-block;
+    content: '';
+    color: transparent;
+    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/folder_dark@2x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+}
+.list.collapsible .tile .icon.folder:before {
     display: inline-block;
     content: '';
     background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/folder_opened_dark@2x.png');
@@ -16,16 +26,6 @@
     height: 1em;
     width: 1em;
 }
-.icon.folder_open:before {
-    display: inline-block;
-    content: '';
-    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/folder_opened_dark@2x.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 1em;
-    width: 1em;
-}
-
 .file_type_rlang:before {
     display: inline-block;
     content: '';
@@ -89,7 +89,7 @@
     height: 1em;
     width: 1em;
 }
-.file_type_zip:before, .file_type_compressed:before {
+.file_type_compressed:before {
     display: inline-block;
     content: '';
     background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/file_type_archive@2x.png');
@@ -98,16 +98,16 @@
     height: 1em;
     width: 1em;
 }
-.file_type_music:before, .file_type_audio:before, .file_type_wav:before {
+.file_type_audio:before{
     display: inline-block;
     content: '';
-    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/file_type_audio@2x.png');
+    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/audio.svg');
     background-size: contain;
     background-repeat: no-repeat;
     height: 1em;
     width: 1em;
 }
-.file_type_babel:before {
+.file_type_babel:before, .file_type_babelrc:before {
     display: inline-block;
     content: '';
     background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/file_type_babel@2x.png');
@@ -341,7 +341,7 @@
     height: 1em;
     width: 1em;
 }
-.file_type_font:before {
+.file_type_font:before  {
     display: inline-block;
     content: '';
     background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/file_type_font.svg');
@@ -458,10 +458,10 @@
     height: 1em;
     width: 1em;
 }
-.file_type_image:before {
+.file_type_image:before, .file_type_gif:before {
     display: inline-block;
     content: '';
-    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/file_type_image.svg');
+    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/image.svg');
     background-size: contain;
     background-repeat: no-repeat;
     height: 1em;
@@ -593,7 +593,7 @@
     height: 1em;
     width: 1em;
 }
-.file_type_lock:before {
+.file_type_lock:before, .file_type_dotenv:before, .file_type_env:before {
     display: inline-block;
     content: '';
     background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/file_type_lock@2x.png');
@@ -872,7 +872,7 @@
     height: 1em;
     width: 1em;
 }
-.file_type_python:before {
+.file_type_python:before, .file_type_py:before, .file_type_pyc:before {
     display: inline-block;
     content: '';
     background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/file_type_python.svg');
@@ -926,7 +926,7 @@
     height: 1em;
     width: 1em;
 }
-.file_type_rust:before {
+.file_type_rust:before, .file_type_rs:before {
     display: inline-block;
     content: '';
     background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/file_type_rust.svg');
@@ -962,7 +962,7 @@
     height: 1em;
     width: 1em;
 }
-.file_type_settings:before {
+.file_type_settings:before, .file_type_conf:before {
     display: inline-block;
     content: '';
     background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/file_type_settings@2x.png');
@@ -971,7 +971,7 @@
     height: 1em;
     width: 1em;
 }
-.file_type_shell:before {
+.file_type_shell:before, .file_type_sh:before {
     display: inline-block;
     content: '';
     background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/file_type_shell.svg');
@@ -1007,7 +1007,7 @@
     height: 1em;
     width: 1em;
 }
-.file_type_sql:before {
+.file_type_sql:before, .file_type_db:before, .file_type_sqlite:before, .file_type_sqlite3:before {
     display: inline-block;
     content: '';
     background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/file_type_sql@2x.png');
@@ -1114,7 +1114,7 @@
     background-repeat: no-repeat;
     height: 1em;
     width: 1em;
-}
+}*/
 .file_type_txt:before {
     display: inline-block;
     content: '';
@@ -1123,7 +1123,7 @@
     background-repeat: no-repeat;
     height: 1em;
     width: 1em;
-}*/
+}
 .file_type_textile:before {
     display: inline-block;
     content: '';
@@ -1304,7 +1304,7 @@
     height: 1em;
     width: 1em;
 }
-.file_type_tailwind:before, .file_type_tailwindconfig:before {
+.file_type_tailwindcss:before {
     display: inline-block;
     content: '';
     background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/tailwind.svg');
@@ -1317,6 +1317,114 @@
     display: inline-block;
     content: '';
     background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/zig.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+}
+.file_type_replit:before {
+    display: inline-block;
+    content: '';
+    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/replit.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+}
+.file_type_mojo:before, .file_type_🔥:before {
+    display: inline-block;
+    content: '';
+    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/mojo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+}
+.file_type_nix:before {
+    display: inline-block;
+    content: '';
+    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/nixos.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+}
+.file_type_poetry:before {
+    display: inline-block;
+    content: '';
+    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/poetry.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+}
+.file_type_qwik:before {
+    display: inline-block;
+    content: '';
+    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/qwik.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+}
+.file_type_tsx:before {
+    display: inline-block;
+    content: '';
+    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/react_ts.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+}
+.file_type_tauri:before {
+    display: inline-block;
+    content: '';
+    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/tauri.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+}
+.file_type_vite:before {
+    display: inline-block;
+    content: '';
+    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/file_type_vite.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+}
+.file_type_bun:before {
+    display: inline-block;
+    content: '';
+    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/bun.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+}
+.file_type_bun:before {
+    display: inline-block;
+    content: '';
+    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/bun.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+}
+.file_type_tsconfig:before {
+    display: inline-block;
+    content: '';
+    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/tsconfig.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+}
+.file_type_jsconfig:before {
+    display: inline-block;
+    content: '';
+    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/jsconfig.svg');
     background-size: contain;
     background-repeat: no-repeat;
     height: 1em;
