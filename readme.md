@@ -7,6 +7,15 @@ Acode Ayu Mirage is a plugin designed for the **Acode editor**, based on the pop
     <br>
     <details>
         <summary>
+            <code><strong>v1.1.1</strong></code>
+        </summary>
+        <ul>
+            <li>fixed bugs</li>
+            <li>added new icon</li>
+        </ul>
+    </details>
+    <details>
+        <summary>
             <code><strong>v1.1.0</strong></code>
         </summary>
         <ul>

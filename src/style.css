@@ -26,6 +26,15 @@
     height: 1em;
     width: 1em;
 }
+.context-menu .folder:before {
+    display: inline-block;
+    content: '';
+    background-image: url('https://localhost/__cdvfile_files-external__/plugins/bajrangcoder.acode.ayumirage/icons/folder_light@2x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+}
 .file_type_rlang:before {
     display: inline-block;
     content: '';

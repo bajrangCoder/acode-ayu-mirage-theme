@@ -25,7 +25,7 @@ function getFileType(filename) {
         jsbeautify: /^\.jsbeautifyrc$/i,
         webpack: /^webpack\.config\.js$/i,
         audio: /\.(mp3|wav|ogg|flac|aac)$/i,
-        git: /(^\.gitignore$)|(^\.gitmodules$)/i,
+        git: /(^\.gitignore$)|(^\.gitmodules$)|(^\.gitattributes)/i,
         video: /\.(mp4|m4a|mov|3gp|wmv|flv|avi)$/i,
         image: /\.(png|jpg|jpeg|gif|bmp|ico|webp)$/i,
         npm: /(^package\.json$)|(^package\-lock\.json$)/i,
