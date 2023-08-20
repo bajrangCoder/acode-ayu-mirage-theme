@@ -7,6 +7,14 @@ Acode Ayu Mirage is a plugin designed for the **Acode editor**, based on the pop
     <br>
     <details>
         <summary>
+            <code><strong>v1.1.2</strong></code>
+        </summary>
+        <ul>
+            <li>added option to disable folder icon</li>
+        </ul>
+    </details>
+    <details>
+        <summary>
             <code><strong>v1.1.1</strong></code>
         </summary>
         <ul>
@@ -51,7 +59,7 @@ Please avoid using any other plugin's icon library while using Acode Ayu. There 
 > Any improvements - [Click here](https://github.com/bajrangCoder/acode-ayu-mirage-theme)
 
 ## Documentation 📖
-### Enabling/Disabling Icon Pack:
+### Enabling/Disabling Icon Pack or Folder Icon:
 
 To enable/disable icon follow given steps
 - `Open Acode App > Settings > Plugins`

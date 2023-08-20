@@ -24,10 +24,6 @@ module.exports = (env, options) => {
         'postcss-loader',
       ],
     },
-    {
-      test: /\.(svg|png)$/,
-      loader: 'file-loader',
-    },
   ];
 
   const main = {

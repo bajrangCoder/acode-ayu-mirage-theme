@@ -1,5 +1,6 @@
 import plugin from '../plugin.json';
-import style from './style.css'
+import style from './style.css';
+import folderIcon from './folderIcon.css';
 
 const themes = acode.require('themes');
 const ThemeBuilder = acode.require('themeBuilder');
@@ -62,12 +63,12 @@ helpers.getIconForFile = (filename) => {
 }
 
 class AyuTheme {
-    #style
-    isIconPack = true;
+    
     constructor() {
         if(!appSettings.value[plugin.id]) {
             appSettings.value[plugin.id] = {
-                iconPack: this.isIconPack,
+                iconPack: true,
+                folderIcon: true,
             };
             appSettings.update(false);
         }
@@ -75,10 +76,13 @@ class AyuTheme {
 
     async init() {
         try {
-            this.#style = <style
-                textContent={style}
-            ></style>
-            document.head.append(this.#style);
+            this.$style = tag('style', {
+                textContent: style
+            });
+            this.$folderIcon = tag('style', {
+                textContent: folderIcon
+            });
+            document.head.append(this.$style, this.$folderIcon);
             const WHITE = "#FFFFFF";
             // 1st Ayu Mirage theme
             const ayuMirage = new ThemeBuilder('Ayu Mirage', 'dark', 'free');
@@ -134,7 +138,10 @@ class AyuTheme {
             themes.add(ayuMirage);
             themes.add(ayuDark);
             if(!this.settings.iconPack){
-                this.#style.remove();
+                this.$style.remove();
+            }
+            if(!this.settings.folderIcon){
+                this.$folderIcon.remove();
             }
         } catch(err) {
             acode.alert("Error", err);
@@ -150,14 +157,25 @@ class AyuTheme {
                     checkbox: this.settings.iconPack,
                     info: `If set to "true" means checked, then it will add a versatile icon pack to acode and that will match Ayu theme schema. If set to "false" means unchecked then icon pack will not be applied`,
                 },
+                {
+                    key: 'folderIcon',
+                    text: 'Enable/Disable Folder Icon',
+                    checkbox: this.settings.folderIcon,
+                    info: `If set to "true" means checked, then it will add a folder icon to acode and that will match Ayu theme schema. If set to "false" means unchecked then folder icon will not be applied`,
+                },
             ],
             cb: (key, value) => {
                 this.settings[key] = value;
                 appSettings.update();
                 if(this.settings.iconPack){
-                    document.head.append(this.#style);
+                    document.head.append(this.$style);
                 } else {
-                    this.#style.remove();
+                    this.$style.remove();
+                }
+                if(this.settings.folderIcon){
+                    document.head.append(this.$folderIcon);
+                } else {
+                    this.$folderIcon.remove();
                 }
             },
         }
@@ -168,7 +186,8 @@ class AyuTheme {
     }
 
     async destroy() {
-        this.#style.remove();
+        this.$style.remove();
+        this.$folderIcon.remove();
         delete appSettings.value[plugin.id]
         appSettings.update(false);
     }
@@ -176,15 +195,17 @@ class AyuTheme {
 
 if(window.acode) {
     const acodePlugin = new AyuTheme();
-    acode.setPluginInit(plugin.id, (baseUrl, $page, {
-        cacheFileUrl, cacheFile
-    }) => {
-        if(!baseUrl.endsWith('/')) {
-            baseUrl += '/';
-        }
-        acodePlugin.baseUrl = baseUrl;
-        acodePlugin.init($page, cacheFile, cacheFileUrl);
-    }, acodePlugin.settingsObj);
+    acode.setPluginInit(
+        plugin.id,
+        async (baseUrl, $page, { cacheFileUrl, cacheFile }) => {
+            if (!baseUrl.endsWith("/")) {
+                baseUrl += "/";
+            }
+            acodePlugin.baseUrl = baseUrl;
+            await acodePlugin.init($page, cacheFile, cacheFileUrl);
+        },
+        acodePlugin.settingsObj
+    );
     acode.setPluginUnmount(plugin.id, () => {
         acodePlugin.destroy();
     });

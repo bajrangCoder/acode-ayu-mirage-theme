@@ -1,38 +1,40 @@
 {
-  "name": "acode-plugin-template",
-  "version": "1.0.0",
-  "description": "Latest Plugin Template For Acode",
-  "main": "dist/main.js",
-  "scripts": {
-    "start-dev": "node .devServer/start-dev",
-    "build": "webpack && node pack-zip.js",
-    "build-release": "webpack --mode production && node pack-zip.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bajrangCoders/acode-plugin-template.git"
-  },
-  "author": "Raunak Raj",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bajrangCoders/acode-plugin-template/issues"
-  },
-  "homepage": "https://github.com/bajrangCoders/acode-plugin-template#readme",
-  "dependencies": {
-    "@babel/cli": "^7.19.3",
-    "@babel/core": "^7.20.5",
-    "@babel/plugin-transform-runtime": "^7.19.6",
-    "@babel/preset-env": "^7.20.2",
-    "autoprefixer": "^10.4.14",
-    "babel-loader": "^9.1.0",
-    "file-loader": "^6.2.0",
-    "html-tag-js": "^1.1.22",
-    "ip": "^1.1.8",
-    "jszip": "^3.10.1",
-    "live-server": "^1.2.2",
-    "postcss-loader": "^7.3.3",
-    "raw-loader": "^4.0.2",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
-  }
+    "name": "acode-plugin-template",
+    "version": "1.0.0",
+    "description": "Latest Plugin Template For Acode",
+    "main": "dist/main.js",
+    "scripts": {
+        "start-dev": "node .devServer/start-dev",
+        "build": "webpack && node pack-zip.js",
+        "build-release": "webpack --mode production && node pack-zip.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bajrangCoders/acode-plugin-template.git"
+    },
+    "author": "Raunak Raj",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/bajrangCoders/acode-plugin-template/issues"
+    },
+    "homepage": "https://github.com/bajrangCoders/acode-plugin-template#readme",
+    "dependencies": {
+        "@babel/runtime": "^7.22.10",
+        "autoprefixer": "^10.4.14",
+        "html-tag-js": "^1.1.22",
+        "postcss": "^8.4.27",
+        "postcss-loader": "^7.3.3",
+        "raw-loader": "^4.0.2"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.18.10",
+        "@babel/core": "^7.18.13",
+        "@babel/plugin-transform-runtime": "^7.19.6",
+        "@babel/preset-env": "^7.18.10",
+        "babel-loader": "^9.1.0",
+        "jszip": "^3.10.1",
+        "live-server": "^1.2.2",
+        "webpack": "^5.76.0",
+        "webpack-cli": "^5.0.0"
+    }
 }
